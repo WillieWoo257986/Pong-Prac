@@ -1,4 +1,4 @@
-def InitGen(s,n):
+def InitGen(n,s):
     possibleCombos = []
 
     for a in range(s):
@@ -25,4 +25,12 @@ def InitGen(s,n):
             possibleCombos.append([a+1])
     return(possibleCombos)
 
-InitGen(3,6)
+# gen all combos of n
+# Check totals
+# check ratio
+
+# gen combos of multipes
+# check duplicates
+# check asending
+
+print(InitGen(3,6))
