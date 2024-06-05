@@ -1,4 +1,8 @@
-def InitGen(n,s):
+n = 3 # Number of tasks
+s = 6 # Sum of points
+R = 10 # Ratio of highest to lowest scoring point
+
+def initGen(n,s):
     possibleCombos = []
 
     for a in range(s):
@@ -25,12 +29,24 @@ def InitGen(n,s):
             possibleCombos.append([a+1])
     return(possibleCombos)
 
+def checkTotals(n, s, input):
+    outputList = []
+    for x in range(len(input)):
+        currentTotal = 0
+        for y in range(n):
+            currentTotal = currentTotal + input[x][y]
+        if(currentTotal == s):
+            outputList.append(input[x])
+
+    return outputList
+
+
 # gen all combos of n
 # Check totals
+# check asending
 # check ratio
 
 # gen combos of multipes
 # check duplicates
-# check asending
 
-print(InitGen(3,6))
+print(checkTotals(n,s,initGen(n,s)))
